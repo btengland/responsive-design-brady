@@ -1,38 +1,107 @@
-.App {
-  text-align: center;
+* {
+  margin: 0;
+  padding: 0;
+  
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+  background-image: url('https://startbootstrap.github.io/startbootstrap-grayscale/assets/img/bg-masthead.jpg');
+  height: 100vh;
+  width: 100vw;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+#hamburger {
+  display: none;
+  height: 20px;
+  width: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+header {
+  height: 15vh;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
+  padding: 35px;
+  box-sizing: border-box;
+}
+
+.bootstrap {
+  color: gray;
+  font-size: 25px;
+  display: flex;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
 }
 
-.App-link {
-  color: #61dafb;
+.body {
+  height: 85vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.gray {
+  opacity: 0.5;
+  font-size: 60px;
+  letter-spacing: 10px;
+  color: #2f2f30;
+}
+
+.nav-bar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav-bar ul {
+  width: 200px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.nav-bar ul li {
+  list-style-type: none;
+}
+
+@media screen and (max-width: 900px){
+  header {
+    width: 100vw;
+    background-color: white;
+    align-items: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  .nav-bar ul {
+    background-color: white;
+    height: 100px;
+    width: 80vw;
+    flex-direction: column;
+    box-sizing: border-box;
+    padding-left: 30px;
+    margin-left: -50px;
+    animation: slide-in 1s ease-in-out;
+  }
+
+  .no{
+    display: none;
+  }
+
+  #hamburger {
+    display: inline-block;
+  }
+
+  .show {
+    transform: translate(-100px,99px);
+  }
+  
+  .bootstrap {
+    transform: translate(0,0)
+  }
+}
+
+@keyframes slide-in {
+  0%{
+    height: 0px;
+  }
+  100%{
+    height: 100px;
   }
 }
